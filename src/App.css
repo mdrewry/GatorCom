@@ -1,0 +1,41 @@
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.padding10 {
+  padding: 10px;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.appTitle {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  color: white;
+}
+.chatGridWrapper {
+  flex-grow: 1;
+}
+.chatPaper {
+  padding: 10px;
+  flex-grow: 1;
+}
+.chatWrapper {
+  flex-grow: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.chat {
+  height: 80vh;
+}
