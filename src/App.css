@@ -1,16 +1,22 @@
+/* Utility */
+a {
+  text-decoration: none;
+}
 .row {
   display: flex;
   flex-direction: row;
 }
-
 .padding10 {
   padding: 10px;
 }
-
+.margin10Top {
+  margin-top: 10px;
+}
 .grow {
   flex-grow: 1;
 }
 
+/* App */
 .app {
   display: flex;
   flex-direction: column;
@@ -22,11 +28,60 @@
   font-style: italic;
   color: white;
 }
-.chatGridWrapper {
-  flex-grow: 1;
+
+/* Landing */
+.landingTitle {
+  font-size: 50px;
+  font-weight: 700;
+  font-style: italic;
+  color: white;
+  margin-bottom: 20vh;
+  margin-top: 10vh;
 }
-.chatPaper {
+.landingWrapper {
+  flex-grow: 1;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.landingPaper {
+  padding: 20px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.landingForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.landingFieldItem {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.landingFieldPaperWrapper {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.landingFieldText {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-style: italic;
+  color: #f37022;
+}
+.landingNameWrapper {
+  width: 70%;
+}
+.landingLangWrapper {
+  width: 30%;
+}
+
+/* Chat */
+.chatGridWrapper {
   flex-grow: 1;
 }
 .chatWrapper {
@@ -36,6 +91,31 @@
   flex-direction: row;
   align-items: center;
 }
+.chatPaper {
+  padding: 10px;
+  flex-grow: 1;
+}
+.chatMessage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
 .chat {
   height: 80vh;
+}
+.chatButton {
+  white-space: nowrap;
+}
+
+/* SurveyForm */
+.visitSurveyButton {
+  padding: 20px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f37022;
 }

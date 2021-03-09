@@ -9,12 +9,14 @@ function Chat({
   userInput,
   setUserInput,
   userLang,
-  setUserLang,
   userChat,
   setUserChat,
   otherChat,
   setOtherChat,
   otherLang,
+  user,
+  userName,
+  labels,
 }) {
   const handleInput = (e) => {
     setUserInput(e.target.value);
@@ -27,27 +29,39 @@ function Chat({
       langTo: otherLang,
     });
     setUserInput("");
-    setUserChat([...userChat, userInput]);
-    setOtherChat([...otherChat, translation.data[0].translations[0].text]);
+    setUserChat([...userChat, { text: userInput, person: user }]);
+    setOtherChat([
+      ...otherChat,
+      { text: translation.data[0].translations[0].text, person: user },
+    ]);
   };
   return (
     <Grid className="chatWrapper" item xs={12} sm={6} md={6} lg={6} xl={6}>
       <Paper className="chatPaper">
+        <div className="row">
+          <Typography>{userName}</Typography>
+          <div className="grow" />
+          <Typography>{userLang}</Typography>
+        </div>
         <div className="chat">
-          {userChat.map((text, index) => (
-            <div className="chatMessage" key={index}>
-              <Typography>{text}</Typography>
-            </div>
+          {userChat.map((message, index) => (
+            <Paper className="chatMessage" key={index}>
+              {message.person === "one" && <div className="grow" />}
+              <Typography>{message.text}</Typography>
+              {message.person === "two" && <div className="grow" />}
+            </Paper>
           ))}
         </div>
         <div className="row">
           <TextField
-            placeholder="Say Something!"
+            placeholder={labels.placeholder}
             value={userInput}
             onChange={handleInput}
             fullWidth={true}
           />
-          <Button onClick={handleTranslate}>Translate</Button>
+          <Button className="chatButton" onClick={handleTranslate}>
+            {labels.button}
+          </Button>
         </div>
       </Paper>
     </Grid>
