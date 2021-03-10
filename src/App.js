@@ -27,10 +27,18 @@ function App() {
   const [userOneLabels, setUserOneLabels] = useState({
     button: "Translate",
     autocomplete: "Say Something",
+    ratingHeader: "How Accurate was the translation?",
+    ratingOne: "Great",
+    ratingTwo: "Okay",
+    ratingThree: "Bad",
   });
   const [userTwoLabels, setUserTwoLabels] = useState({
     button: "Translate",
     autocomplete: "Say Something",
+    ratingHeader: "How Accurate was the translation?",
+    ratingOne: "Great",
+    ratingTwo: "Okay",
+    ratingThree: "Bad",
   });
   const [sessionEndButtonLabel, setSessionEndButtonLabel] = useState({
     langOne: "End Chat",
@@ -106,24 +114,7 @@ function App() {
             />
           </Fragment>
         )}
-        {page === 2 && (
-          <SurveyForm
-            labels={surveyLabels}
-            setPage={setPage}
-            setUserOneInput={setUserOneInput}
-            setUserTwoInput={setUserTwoInput}
-            setUserOneChat={setUserOneChat}
-            setUserTwoChat={setUserTwoChat}
-            setUserOneName={setUserOneName}
-            setUserTwoName={setUserTwoName}
-            setUserOneLang={setUserOneLang}
-            setUserTwoLang={setUserTwoLang}
-            setSurveyLabels={setSurveyLabels}
-            setUserOneLabels={setUserOneLabels}
-            setUserTwoLabels={setUserTwoLabels}
-            setSessionEndButtonLabel={setSessionEndButtonLabel}
-          />
-        )}
+        {page === 2 && <SurveyForm labels={surveyLabels} />}
       </Grid>
     </div>
   );

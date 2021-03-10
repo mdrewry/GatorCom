@@ -195,10 +195,6 @@ const isoLangs = {
     name: "Russian",
     nativeName: "русский язык",
   },
-  sa: {
-    name: "Sanskrit (Saṁskṛta)",
-    nativeName: "संस्कृतम्",
-  },
   sm: {
     name: "Samoan",
     nativeName: "gagana faa Samoa",
@@ -266,10 +262,6 @@ const isoLangs = {
   vi: {
     name: "Vietnamese",
     nativeName: "Tiếng Việt",
-  },
-  vo: {
-    name: "Volapük",
-    nativeName: "Volapük",
   },
   cy: {
     name: "Welsh",

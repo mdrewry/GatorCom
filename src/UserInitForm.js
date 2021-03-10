@@ -2,6 +2,7 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
 import isoLangs from "./langs";
 import { Typography } from "@material-ui/core";
 function UserInitForm({ setUserName, setLang, user }) {
@@ -21,8 +22,8 @@ function UserInitForm({ setUserName, setLang, user }) {
   return (
     <Paper className="landingFieldPaperWrapper">
       <Typography className="landingFieldText">User {user}</Typography>
-      <div className="landingFieldItem">
-        <div className="landingNameWrapper">
+      <Grid container spacing={0}>
+        <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
           <TextField
             fullWidth={true}
             onChange={handleNameChange}
@@ -30,8 +31,8 @@ function UserInitForm({ setUserName, setLang, user }) {
             placeholder={user === "One" ? "Andrea" : "Nelson"}
             required
           />
-        </div>
-        <div className="landingLangWrapper">
+        </Grid>
+        <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
           <TextField
             fullWidth={true}
             onChange={handleLangChange}
@@ -46,8 +47,8 @@ function UserInitForm({ setUserName, setLang, user }) {
               </MenuItem>
             ))}
           </TextField>
-        </div>
-      </div>
+        </Grid>
+      </Grid>
     </Paper>
   );
 }

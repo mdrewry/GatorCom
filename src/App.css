@@ -6,6 +6,11 @@ a {
   display: flex;
   flex-direction: row;
 }
+.rowCenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .padding10 {
   padding: 10px;
 }
@@ -73,12 +78,6 @@ a {
   font-style: italic;
   color: #f37022;
 }
-.landingNameWrapper {
-  width: 70%;
-}
-.landingLangWrapper {
-  width: 30%;
-}
 
 /* Chat */
 .chatGridWrapper {
@@ -90,21 +89,68 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 .chatPaper {
   padding: 10px;
-  flex-grow: 1;
+  width: 70%;
 }
-.chatMessage {
+@media only screen and (max-width: 1000px) {
+  .chatPaper {
+    padding: 10px;
+    width: 100%;
+  }
+}
+.chatHeader {
+  padding-left: 5px;
+  padding-right: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 10px;
+}
+.chatLangHighlight {
+  background-color: #f37022;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.chatLangText {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  color: white;
+}
+.chatNameText {
+  font-size: 30px;
+  font-weight: 700;
+  font-style: italic;
+  color: #f37022;
+}
+.chatMessageUser {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.chatMessageOther {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .chat {
   height: 80vh;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.chat::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 .chatButton {
   white-space: nowrap;

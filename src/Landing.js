@@ -39,6 +39,12 @@ function Landing({
     const userButtons = await getTranslation("Translate");
     const userAutoCompletes = await getTranslation("Say Something");
     const sessionEndButton = await getTranslation("End Session");
+    const ratingLabelOne = await getTranslation("Great");
+    const ratingLabelTwo = await getTranslation("Okay");
+    const ratingLabelThree = await getTranslation("Bad");
+    const ratingLabelHeader = await getTranslation(
+      "How accurate was the translation?"
+    );
     setSurveyLabels({
       header: { langOne: surveyHeader[0].text, langTwo: surveyHeader[1].text },
       button: { langOne: surveyButton[0].text, langTwo: surveyButton[1].text },
@@ -46,10 +52,18 @@ function Landing({
     setUserOneLabels({
       button: userButtons[0].text,
       autocomplete: userAutoCompletes[0].text,
+      ratingHeader: ratingLabelHeader[0].text,
+      ratingOne: ratingLabelOne[0].text,
+      ratingTwo: ratingLabelTwo[0].text,
+      ratingThree: ratingLabelThree[0].text,
     });
     setUserTwoLabels({
       button: userButtons[1].text,
       autocomplete: userAutoCompletes[1].text,
+      ratingHeader: ratingLabelHeader[1].text,
+      ratingOne: ratingLabelOne[1].text,
+      ratingTwo: ratingLabelTwo[1].text,
+      ratingThree: ratingLabelThree[1].text,
     });
     setSessionEndButtonLabel({
       langOne: sessionEndButton[0].text,
@@ -82,9 +96,9 @@ function Landing({
               <Loader
                 type="Puff"
                 color="#f37022"
-                height={100}
-                width={100}
-                timeout={3000}
+                height={50}
+                width={50}
+                timeout={10000}
               />
             ) : (
               "Start Chatting"
