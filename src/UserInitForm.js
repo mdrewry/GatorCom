@@ -5,20 +5,19 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import isoLangs from "./langs";
 import { Typography } from "@material-ui/core";
-function UserInitForm({ setUserName, setLang, user }) {
-  const handleNameChange = (e) => {
-    setUserName(e.target.value);
-  };
-  const handleLangChange = (e) => {
-    setLang(e.target.value);
-  };
-
+function UserInitForm({ setUserName, lang, setLang, user }) {
   const langs = Object.keys(isoLangs).map((key) => {
     return {
       label: `${isoLangs[key].name}, ${isoLangs[key].nativeName}`,
       value: key,
     };
   });
+  const handleNameChange = (e) => {
+    setUserName(e.target.value);
+  };
+  const handleLangChange = (e) => {
+    setLang(e.target.value);
+  };
   return (
     <Paper className="landingFieldPaperWrapper">
       <Typography className="landingFieldText">User {user}</Typography>
@@ -36,6 +35,7 @@ function UserInitForm({ setUserName, setLang, user }) {
           <TextField
             fullWidth={true}
             onChange={handleLangChange}
+            value={lang}
             label="Language"
             placeholder={user === "One" ? "en" : "de"}
             select

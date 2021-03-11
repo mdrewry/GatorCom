@@ -28,7 +28,7 @@ a {
   min-height: 100vh;
 }
 .appTitle {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
   font-style: italic;
   color: white;
@@ -130,15 +130,19 @@ a {
   font-style: italic;
   color: #f37022;
 }
-.chatMessageUser {
+.chatMessage {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.chatMessageOther {
+.chatMessageRating {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 .chat {
   height: 80vh;

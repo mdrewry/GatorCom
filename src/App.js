@@ -11,12 +11,12 @@ import SurveyForm from "./SurveyForm";
 function App() {
   const [userOneName, setUserOneName] = useState("");
   const [userTwoName, setUserTwoName] = useState("");
-  const [userOneInput, setUserOneInput] = useState("hello");
+  const [userOneInput, setUserOneInput] = useState("");
   const [userTwoInput, setUserTwoInput] = useState("");
   const [userOneChat, setUserOneChat] = useState([]);
   const [userTwoChat, setUserTwoChat] = useState([]);
-  const [userOneLang, setUserOneLang] = useState("en");
-  const [userTwoLang, setUserTwoLang] = useState("de");
+  const [userOneLang, setUserOneLang] = useState("");
+  const [userTwoLang, setUserTwoLang] = useState("");
   const [surveyLabels, setSurveyLabels] = useState({
     header: {
       langOne: "Thanks for using the app!",
@@ -27,18 +27,16 @@ function App() {
   const [userOneLabels, setUserOneLabels] = useState({
     button: "Translate",
     autocomplete: "Say Something",
-    ratingHeader: "How Accurate was the translation?",
-    ratingOne: "Great",
-    ratingTwo: "Okay",
-    ratingThree: "Bad",
+    ratingHeader: "Was the translation helpful?",
+    ratingOne: "Yes",
+    ratingTwo: "No",
   });
   const [userTwoLabels, setUserTwoLabels] = useState({
     button: "Translate",
     autocomplete: "Say Something",
-    ratingHeader: "How Accurate was the translation?",
-    ratingOne: "Great",
-    ratingTwo: "Okay",
-    ratingThree: "Bad",
+    ratingHeader: "Was the translation helpful?",
+    ratingOne: "Yes",
+    ratingTwo: "No",
   });
   const [sessionEndButtonLabel, setSessionEndButtonLabel] = useState({
     langOne: "End Chat",
