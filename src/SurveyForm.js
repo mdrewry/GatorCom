@@ -10,7 +10,7 @@ function SurveyForm({ labels }) {
         <br />
         {labels.header.langTwo}
       </Typography>
-      <a href="https://elearning.ufl.edu/supported-services/qualtrics/">
+      <a href="https://forms.gle/PHT8PrXNEHmdnRDi8">
         <Button variant="contained" className="visitSurveyButton">
           {labels.button.langOne}
           <br />
