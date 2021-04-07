@@ -8,8 +8,6 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Landing from "./Landing";
 import SurveyForm from "./SurveyForm";
-// import { functions } from "./firebase";
-// import isoLangs from "./langs";
 function App() {
   const [userOneName, setUserOneName] = useState("");
   const [userTwoName, setUserTwoName] = useState("");
@@ -48,23 +46,16 @@ function App() {
   const handleNextPage = () => {
     setPage(page + 1);
   };
-  // const handleScript = async () => {
-  //   const testTranslate = functions.httpsCallable("testLangSupport");
-  //   const translation = await testTranslate({
-  //     langList: Object.keys(isoLangs).map((key) => key),
-  //   });
-  //   console.log(translation);
-  // };
+
   const title = "GatorCom";
   return (
     <div className="app">
-      <AppBar className="padding10" position="sticky" variant="outlined">
-        <Toolbar className="row">
-          {/* <Button onClick={handleScript}>script</Button> */}
+      <AppBar className="appBar" position="static" variant="outlined">
+        <Toolbar className="rowCenter">
           <Typography className="appTitle">{title}</Typography>
           <div className="grow" />
           {page === 1 && (
-            <Button onClick={handleNextPage}>
+            <Button className="appBarButton" onClick={handleNextPage}>
               {sessionEndButtonLabel.langOne}
               <br />
               {sessionEndButtonLabel.langTwo}
@@ -72,7 +63,7 @@ function App() {
           )}
         </Toolbar>
       </AppBar>
-      <Grid className="chatGridWrapper" container spacing={0}>
+      <Grid className="contentWrapper" container spacing={0}>
         {page === 0 && (
           <Landing
             userOneName={userOneName}

@@ -42,7 +42,7 @@ function Chat({
   };
   return (
     <Grid className="chatWrapper" item xs={12} sm={6} md={6} lg={6} xl={6}>
-      <Paper className="chatPaper">
+      <Paper className="chatPaper" style={{ paddingTop: 0 }}>
         <div className="chatHeader">
           <Typography className="chatNameText">{userName}</Typography>
           <div className="grow" />

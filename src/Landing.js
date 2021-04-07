@@ -45,7 +45,6 @@ function Landing({
       ratingLabelTwo: "No",
     };
     const translation = await getTranslation(query);
-    console.log(translation);
     setSurveyLabels({
       header: {
         langOne: translation["surveyHeader"].langOne,
@@ -79,7 +78,9 @@ function Landing({
   };
   return (
     <Grid className="landingWrapper" item xs={12}>
+      <div className="grow" />
       <Typography className="landingTitle">Welcome to GatorCom</Typography>
+      <div className="grow" />
       <Paper className="landingPaper">
         <form className="landingForm" onSubmit={handleSubmit}>
           <UserInitForm
@@ -111,6 +112,7 @@ function Landing({
           </Button>
         </form>
       </Paper>
+      <div className="grow" />
     </Grid>
   );
 }
